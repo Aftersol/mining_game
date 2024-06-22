@@ -75,7 +75,7 @@ class tile {
     this.breakCount--;
     if (this.breakCount > 0) { // break the block by switching the block to void
       this.type = tileType.TILE_VOID;
-      dirtBreak[rand(4)].play(); // play one of the four dirt breaking sounds
+      //dirtBreak[rand(4)].play(); // play one of the four dirt breaking sounds
     }
   }
 
@@ -195,7 +195,7 @@ function playerTouchingWall(dir) {
         
         if (isBomb) {
           displayEndScreen(false);
-          boomSound.play();
+          //boomSound.play();
           return true;
         }
         
@@ -239,7 +239,7 @@ function playerTouchingWall(dir) {
         } 
         if (isBomb) {
           displayEndScreen(false);
-          boomSound.play();
+          //boomSound.play();
           return true;
         }
         if (isHazard) return true;
@@ -281,7 +281,7 @@ function playerTouchingWall(dir) {
         
         if (isBomb) {
           displayEndScreen(false);
-          boomSound.play();
+          //boomSound.play();
           return true;
         }
         if (isHazard) return true;
@@ -323,7 +323,7 @@ function playerTouchingWall(dir) {
         
         if (isBomb) {
           displayEndScreen(false);
-          boomSound.play();
+          //boomSound.play();
           return true;
         }
         if (isHazard) return true;
@@ -422,7 +422,7 @@ function drawMenu() {
 
 function displayEndScreen(won) {
   if (won) {
-    winnerSound.play();
+    //winnerSound.play();
 
     if (rand(2) === 0 && hazardGenBiasedBombNum <= 13) {
       console.log("More chances of bomb");
@@ -471,8 +471,8 @@ function drawMainGame() {
     if (treasure.isVisible === true) {
       treasure.isVisible = false;
       player.hasTreasure = true;
-      interfaceSound.play();
-      interfaceSound.play();
+      //interfaceSound.play();
+      //interfaceSound.play();
     }
   }
   
@@ -487,7 +487,7 @@ function drawMainGame() {
   if (player.y >= lavaLevel && isInLava === false) {
     //console.log("OH NOES! HE DED!");
     displayEndScreen(false);
-    aughSound.play();
+    //aughSound.play();
     return;
     //buildGame();
   }
@@ -497,7 +497,7 @@ function drawMainGame() {
   
   if (lavaLevel < 21 && !lavaWarningMusic.isPlaying())
   {
-    lavaWarningMusic.play();
+    //lavaWarningMusic.play();
   }
   
   fill(255, 255, 255);
@@ -564,7 +564,7 @@ function getEndScreenKeyCode(myKeyCode) {
       break;
     }
     case 32: { // Space
-      interfaceSound.play();
+      //interfaceSound.play();
       buildGame();
       break;
     }
@@ -578,7 +578,7 @@ function getEndScreenKeyCode(myKeyCode) {
 function getMenuKeyCode(myKeyCode)
 {
   if (myKeyCode === 32) // space
-    interfaceSound.play();
+    //interfaceSound.play();
     buildGame();
 }
 
@@ -635,7 +635,7 @@ function buildGame() {
 }
 
 function preload() {
-  soundFormats('mp3', 'ogg', 'wav')
+  //soundFormats('mp3', 'ogg', 'wav')
   
   // load all the images needed for the game
   playerImage = loadImage("images/player.png");
@@ -655,21 +655,21 @@ function preload() {
   fasterTimeText = loadImage('images/fasterTime.png');
   
   // load sound
-  boomSound = loadSound('sounds/boom.wav');
-  aughSound = loadSound('sounds/augh.mp3');
-  winnerSound = loadSound('sounds/winner.mp3');
+  //boomSound = loadSound('sounds/boom.wav');
+  //aughSound = loadSound('sounds/augh.mp3');
+  //winnerSound = loadSound('sounds/winner.mp3');
   
-  interfaceSound = loadSound('sounds/interface.mp3');
+  //interfaceSound = loadSound('sounds/interface.mp3');
   
-  lavaWarningMusic = loadSound('sounds/one_winged_angel.mp3');
+  //lavaWarningMusic = loadSound('sounds/one_winged_angel.mp3');
   
   // array used for randomizing dirt sounds
-  dirtBreak = [
+  /*dirtBreak = [
     loadSound('sounds/dirt0.mp3'),
     loadSound('sounds/dirt1.mp3'),
     loadSound('sounds/dirt2.mp3'),
     loadSound('sounds/dirt3.mp3')
-  ];
+  ];*/
 }
 
 function setup() {
