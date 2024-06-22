@@ -441,7 +441,7 @@ function displayEndScreen(won) {
     getEndScreenKeyCode(keyCode);
   };
   
-  lavaWarningMusic.stop();
+  //lavaWarningMusic.stop();
 }
 
 function drawEndScreen(won) {
