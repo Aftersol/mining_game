@@ -495,10 +495,10 @@ function drawMainGame() {
   timer = Math.min(timer + 1, timeLimit * 60 + Math.floor(numRows * 60));
   lavaLevel = Math.max(0, numRows + timeLimit - Math.floor(timer / 60));
   
-  /*if (lavaLevel < 21 && !lavaWarningMusic.isPlaying())
-  {
-    lavaWarningMusic.play();
-  }*/
+  //if (lavaLevel < 21 && !lavaWarningMusic.isPlaying())
+  //{
+  //  lavaWarningMusic.play();
+  //}*/
   
   fill(255, 255, 255);
   textSize(32);
