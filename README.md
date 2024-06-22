@@ -1,5 +1,7 @@
 # Mining Game
   [Play Now](https://aftersol.github.io/mining_game)
+
+  ![alt text](images/for_readme/demo_screenshot.png "A player trying get treasure while the lava is rising")
   
   A game where you must retrieve the treasure and carry it to the surface before lava rises up and cooks you.
 ## How to Play
